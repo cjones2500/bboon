@@ -83,7 +83,72 @@ demo = {
           }]
         ];
 
-        Chartist.Bar('#chartActivity', data, options, responsiveOptions);
+        /*Chartist.Bar('#chartActivity', data, options, responsiveOptions);*/
+
+        var workoutOptions =  ['Core and Abs', 'Chest, Back & Abs', 'Butt and Legs', 'Arms and Abs', 'Full Body 50', 'Full Body']
+
+        Chartist.Bar('#chartActivity', {
+        labels: workoutOptions,
+            series: [
+              [60, 60, 60, 60, 50, 45]
+            ]
+          }, {
+            seriesBarDistance: 10,
+            reverseData: true,
+            horizontalBars: true,
+
+            axisY: {
+              offset: 70
+            }
+          });
+
+          Chartist.Bar('#chartActivity2', {
+            labels: workoutOptions,
+          series: [
+                [87, 76, 78, 75, 75, 80],
+                [90, 91, 94, 85, 85, 98]
+              ]
+            }, {
+              seriesBarDistance: 10,
+              reverseData: true,
+              horizontalBars: true,
+
+              axisY: {
+                offset: 70
+              }
+            });
+
+            Chartist.Bar('#chartActivity3', {
+              labels: workoutOptions,
+            series: [
+                  [3.9, 1.6, 1.7, 2.2, 3.6, 2.5]
+                ]
+              }, {
+                seriesBarDistance: 10,
+                reverseData: true,
+                horizontalBars: true,
+
+                axisY: {
+                  offset: 70
+                }
+              });
+
+              Chartist.Bar('#chartActivity4', {
+                labels: workoutOptions,
+              series: [
+                    [10.2,11.2,12.6, 12.5, 10.5, 11.3]
+                  ]
+                }, {
+                  seriesBarDistance: 10,
+                  reverseData: true,
+                  horizontalBars: true,
+
+                  axisY: {
+                    offset: 70
+                  }
+                });
+
+
 
         var dataPreferences = {
             series: [
